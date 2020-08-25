@@ -1,7 +1,8 @@
-<h1>Home#index</h1>
-<% if user_signed_in? %>
-    <%= render 'tweets/form', tweet: @tweet %>
-<% end %>
+<div class="container">
+    <% if user_signed_in? %>
+        <%= render 'tweets/form', tweet: @tweet %>
+    <% end %>
+</div>
 
 <div class="row">
     <% @tweets.each do |tweet| %>
