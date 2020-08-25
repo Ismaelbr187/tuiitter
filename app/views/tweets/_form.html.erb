@@ -12,16 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label :content, "#{current_user.username} dice:" %>
+    <%= form.text_area :content, :class => "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Tüiittear", :class => "btn btn-primary" %>
   </div>
 <% end %>
