@@ -5,7 +5,10 @@
         <div class="col-12 border border-info p-3 mt-3">
             <%= image_tag (tweet.user.photo_url), class: "avatar-in-tweet rounded" %>
             <%= tweet.content %>
+            <hr/>
             <%= tweet.likes.count %> likes | 0 retweets
         </div>
     <% end %>
+
+    <%= paginate @tweets %>
 </div>
